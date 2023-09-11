@@ -1,0 +1,70 @@
+
+
+.dev-icons {
+    padding-left: 0;
+    list-style: none;
+    font-size: 5rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+.software-skill-inline {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.software-skill-inline {
+    color: #868e96;
+}
+.software-skill-inline > p {
+    color: #868e96;
+    font-size: 16px;
+}
+
+.software-skill-inline.html > i:hover, .software-skill-inline.html > i:hover ~ p {
+    color: #E34F26;
+}
+.software-skill-inline.css > i:hover, .software-skill-inline.css > i:hover ~ p {
+    color: #1572B6;
+}
+.software-skill-inline.js > i:hover, .software-skill-inline.js > i:hover ~ p {
+    color: #F7DF1E;
+}
+.software-skill-inline.react > i:hover, .software-skill-inline.react > i:hover ~ p {
+    color: #61DAFB;
+}
+.software-skill-inline.tailwind > i:hover, .software-skill-inline.tailwind > i:hover ~ p {
+    color: #38B2AC;
+}
+.software-skill-inline.redux > i:hover, .software-skill-inline.redux > i:hover ~ p {
+    color: #764ABC;
+}
+.software-skill-inline.node > i:hover, .software-skill-inline.node > i:hover ~ p {
+    color: #339933;
+}
+.software-skill-inline.mongo > i:hover, .software-skill-inline.mongo > i:hover ~ p {
+    color: #4DB33D;
+}
+.software-skill-inline.express > i:hover, .software-skill-inline.express > i:hover ~ p {
+    color: #290a0a;
+}
+.software-skill-inline.firebase > i:hover, .software-skill-inline.firebase > i:hover ~ p {
+    color: #FFCA28;
+}
+.software-skill-inline.mysql > i:hover, .software-skill-inline.mysql > i:hover ~ p {
+    color: #00758F;
+}
+   /*  syle for the mui svg icon    */
+
+.custom-icon {
+    fill: #868e96; 
+    transition: fill 0.5s ease; 
+  }
+
+  .custom-icon:hover {
+    fill: #1976D2; 
+  }
+  
+ .software-skill-inline.mui > i:hover ~ p {
+    color: #1976D2;
+}
