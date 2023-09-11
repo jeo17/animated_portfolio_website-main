@@ -4,7 +4,6 @@ import SkillBox from "../../chip/SkillBox"; */
 
 import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
 
-import SiMui from "./Mui.png";
 import {
   SiJavascript,
   SiTailwindcss,
@@ -59,12 +58,7 @@ const Skills = ({ darkMode }) => {
                   name={"Tailwind CSS"}
                   value={85}
                 />
-                  <ProgressBar
-                  style={{margin:"50px"}}
-                  logo={<img src={SiMui} style={{width:"24px"}}/>}
-                  name={"Mui"}
-                  value={94}
-                />
+
               </div>
             </div>
           </div>
