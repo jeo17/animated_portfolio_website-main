@@ -16,42 +16,42 @@
 .software-skill-inline {
     color: #868e96;
 }
-.software-skill-inline > p {
+.software-skill-inline > legend {
     color: #868e96;
     font-size: 16px;
 }
 
-.software-skill-inline.html > i:hover, .software-skill-inline.html > i:hover ~ p {
+.software-skill-inline.html > i:hover, .software-skill-inline.html > i:hover ~ legend {
     color: #E34F26;
 }
-.software-skill-inline.css > i:hover, .software-skill-inline.css > i:hover ~ p {
+.software-skill-inline.css > i:hover, .software-skill-inline.css > i:hover ~ legend {
     color: #1572B6;
 }
-.software-skill-inline.js > i:hover, .software-skill-inline.js > i:hover ~ p {
+.software-skill-inline.js > i:hover, .software-skill-inline.js > i:hover ~ legend {
     color: #F7DF1E;
 }
-.software-skill-inline.react > i:hover, .software-skill-inline.react > i:hover ~ p {
+.software-skill-inline.react > i:hover, .software-skill-inline.react > i:hover ~ legend {
     color: #61DAFB;
 }
-.software-skill-inline.tailwind > i:hover, .software-skill-inline.tailwind > i:hover ~ p {
+.software-skill-inline.tailwind > i:hover, .software-skill-inline.tailwind > i:hover ~ legend {
     color: #38B2AC;
 }
-.software-skill-inline.redux > i:hover, .software-skill-inline.redux > i:hover ~ p {
+.software-skill-inline.redux > i:hover, .software-skill-inline.redux > i:hover ~ legend {
     color: #764ABC;
 }
-.software-skill-inline.node > i:hover, .software-skill-inline.node > i:hover ~ p {
+.software-skill-inline.node > i:hover, .software-skill-inline.node > i:hover ~ legend {
     color: #339933;
 }
-.software-skill-inline.mongo > i:hover, .software-skill-inline.mongo > i:hover ~ p {
+.software-skill-inline.mongo > i:hover, .software-skill-inline.mongo > i:hover ~ legend {
     color: #4DB33D;
 }
-.software-skill-inline.express > i:hover, .software-skill-inline.express > i:hover ~ p {
-    color: #290a0a;
+.software-skill-inline.express > i:hover, .software-skill-inline.express > i:hover ~ legend {
+    color: #4d0b0b;
 }
-.software-skill-inline.firebase > i:hover, .software-skill-inline.firebase > i:hover ~ p {
+.software-skill-inline.firebase > i:hover, .software-skill-inline.firebase > i:hover ~ legend {
     color: #FFCA28;
 }
-.software-skill-inline.mysql > i:hover, .software-skill-inline.mysql > i:hover ~ p {
+.software-skill-inline.mysql > i:hover, .software-skill-inline.mysql > i:hover ~ legend {
     color: #00758F;
 }
    /*  syle for the mui svg icon    */
@@ -65,6 +65,6 @@
     fill: #1976D2; 
   }
   
- .software-skill-inline.mui > i:hover ~ p {
+ .software-skill-inline.mui > i:hover ~ legend {
     color: #1976D2;
 }

@@ -29,9 +29,9 @@ const WorkCard = () => {
               <div
                 className={` popup w-full  h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
               >
-                <p className=" text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
+                <span className=" text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
                   {data.desc}
-                </p>
+                </span>
                 <div className=" flex items-center justify-center gap-4">
                   {data.id !== 1 && (
                     <Link
@@ -40,7 +40,7 @@ const WorkCard = () => {
                       className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
                     >
                       <RxExternalLink className=" text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
-                      <p className=" text-black">Demo</p>
+                      <span className=" text-black">Demo</span>
                     </Link>
                   )}
 
@@ -51,7 +51,7 @@ const WorkCard = () => {
                     className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
                   >
                     <AiOutlineGithub className="  text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
-                    <p className=" text-black">Code</p>
+                    <span className=" text-black">Code</span>
                   </Link>
                 </div>
               </div>

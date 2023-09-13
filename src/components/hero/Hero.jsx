@@ -37,12 +37,12 @@ const Hero = () => {
               repeat={Infinity}
               className="text-yellow-500 text-4xl font-bold sm:text-3xl"
             />
-            <p
+            <span
               // data-aos="fade-up"
               className=" text-[1.1rem] font-medium w-3/4 md:w-full text-gray-600 sm:text-[.95rem]"
             >
               Let's find out together what I can do 🧐
-            </p>
+            </span>
           </div>
           <div data-aos="fade-up" className="buttons flex gap-5">
             <a

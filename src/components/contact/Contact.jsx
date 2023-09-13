@@ -40,8 +40,8 @@ const Contact = () => {
             <div 
             data-aos="zoom-in"
             >
-              <h1 className="text-5xl font-bold sm:text-3xl">You Need</h1>
-              <h3 className="text-xl sm:text-lg">
+              <h1 className="contact-text text-5xl font-bold sm:text-3xl">You Need</h1>
+              <h3 className="contact-text text-xl sm:text-lg">
               Beautiful design for your website or managing your data Leave a request
               </h3>
             </div>
@@ -53,7 +53,7 @@ const Contact = () => {
               
               className= " text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow-[0_0_10px_1px_rgba(0,0,0,0.1)] "
             >
-              <BsArrowRight className=" md:rotate-90" />
+              <BsArrowRight className="footer-icons md:rotate-90" />
             </button>
           </div>
         </div>
@@ -94,7 +94,7 @@ const Contact = () => {
               }}
             />
             <button
-              className="bg-yellow-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1"
+              className="contact-bg bg-yellow-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1"
               type="submit"
             >
               <span>Send</span>

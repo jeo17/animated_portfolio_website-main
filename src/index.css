@@ -1,7 +1,6 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -38,21 +37,84 @@ html {
   background: #000;
 }
 
-
-
-
 /* Hero circular spin */
-.circle-text{
+.circle-text {
   -webkit-animation: spin 12s linear infinite;
   animation: spin 12s linear infinite;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #edff08, #a8fe39);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, #edff08, #a8fe39);
+}
+.gradient-bg2 {
+  background: linear-gradient(45deg, #a8fe39, #edff08);
+}
+
+/***********************
+     Dark Mode Style
+***********************/
+
+.dark #root {
+  background-color: #000;
+}
+.dark #root p {
+  color: whitesmoke;
+}
+
+.dark #root .full-name,
+.dark #root .contact-text,
+.dark #root .nav-bar-items,
+.dark #root .footer-text {
+  color: whitesmoke;
+}
+.nav-bar,
+.dark #root .footer-bg {
+  background: #181818;
+}
+.dark #root .nav-bar-hire {
+  color: #181818 !important;
+  background-color: whitesmoke !important;
+}
+.dark #root .resume-text {
+  background: linear-gradient(45deg, #edff08, #a8fe39);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark #root .resume-border {
+  border-color: #a8fe39;
+}
+
+.dark #root .contact-bg {
+  background: linear-gradient(45deg, #a8fe39, #edff08);
+  color: #181818;
+}
+.dark #root .footer-icons {
+  color: #9aff18;
 }
