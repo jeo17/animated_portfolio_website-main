@@ -1,91 +1,102 @@
 import { React, useState } from "react";
 import "./ModeSwitcher.css";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
-setTimeout(() => {
-  var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-  var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+const sun =
+  "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+const moon =
+  "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
 
-  // Change the icons inside the button based on previous settings
-  if (
-    localStorage.getItem("color-theme") === "dark" ||
-    (!("color-theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    themeToggleLightIcon.classList.remove("hidden");
-  } else {
-    themeToggleDarkIcon.classList.remove("hidden");
-  }
+function setLight() {
+  const container = document.getElementsByClassName("theme-container")[0];
+  const themeIcon = document.getElementById("theme-icon");
 
-  var themeToggleBtn = document.getElementById("theme-toggle");
+  container.classList.remove("shadow-dark");
+  setTimeout(() => {
+    container.classList.add("shadow-light");
+    themeIcon.classList.remove("change");
+  }, 300);
+  themeIcon.classList.add("change");
+  themeIcon.src = sun;
+}
+function setDark() {
+  const container = document.getElementsByClassName("theme-container")[0];
+  const themeIcon = document.getElementById("theme-icon");
 
-  themeToggleBtn.addEventListener("click", function () {
-    // toggle icons inside button
-    themeToggleDarkIcon.classList.toggle("hidden");
-    themeToggleLightIcon.classList.toggle("hidden");
+  container.classList.remove("shadow-light");
+  setTimeout(() => {
+    container.classList.add("shadow-dark");
+    themeIcon.classList.remove("change");
+  }, 300);
+  themeIcon.classList.add("change");
+  themeIcon.src = moon;
+}
 
-    // if set via local storage previously
-    if (localStorage.getItem("color-theme")) {
-      if (localStorage.getItem("color-theme") === "light") {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("color-theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("color-theme", "light");
-      }
+// Change the icons inside the button based on previous settings
 
-      // if NOT set via local storage previously
+const Toggle = () => {
+  // if set via local storage previously
+  if (localStorage.getItem("color-theme")) {
+    if (localStorage.getItem("color-theme") === "light") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("color-theme", "dark");
+      setDark();
     } else {
-      if (document.documentElement.classList.contains("dark")) {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("color-theme", "light");
-      } else {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("color-theme", "dark");
-      }
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("color-theme", "light");
+      setLight();
     }
-  });
-}, 1600);
+
+    // if NOT set via local storage previously
+  } else {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("color-theme", "light");
+      setLight();
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("color-theme", "dark");
+      setDark();
+    }
+  }
+};
 
 const ModeSwitcher = () => {
-  const [switecherBg, setswitecherBg] = useState(
-    localStorage.getItem("color-theme") === undefined
-      ? "moon"
-      : localStorage.getItem("color-theme") ==="dark" ?"sun" :"moon"
-  );
+  const { changeMode } = useContext(ThemeContext);
+
+  let toggletheme = localStorage.getItem("color-theme")
+    ? localStorage.getItem("color-theme") === "light"
+      ? "shadow-light"
+      : "shadow-dark"
+    : "shadow-dark";
+
+    let toggleIcon = localStorage.getItem("color-theme")
+    ? localStorage.getItem("color-theme") === "light"
+      ? "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
+      : "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
+    : "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+
 
   return (
-    <button
-     onClick={(eo) => {
-        switecherBg === "moon" ? setswitecherBg("sun"):setswitecherBg("moon")
-     }}
-
+    <div
       id="theme-toggle"
-      type="button"
-      className={`${switecherBg} text-[1rem] text-white px-2 py-2 rounded-lg font-bold md:m-5 md:block md:mx-auto md:w-fit lg:px-3`}
+      className={`theme-container ${toggletheme}`}
+      onClick={(eo) => {
+        changeMode(
+          localStorage.getItem("color-theme") === null
+            ? "dark"
+            : localStorage.getItem("color-theme") === "dark"? "light" :"dark"
+        );
+        Toggle();
+      }}
     >
-      <svg
-        id="theme-toggle-dark-icon"
-        className="w-5 h-5 hidden"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-      </svg>
-      <svg
-        id="theme-toggle-light-icon"
-        className="w-5 h-5 hidden"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-          fillRule="evenodd"
-          clipRule="evenodd"
-        ></path>
-      </svg>
-    </button>
+      <img
+        id="theme-icon"
+        src={toggleIcon}
+        alt="Sun/moon"
+      />
+    </div>
   );
 };
 

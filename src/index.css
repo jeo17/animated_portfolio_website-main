@@ -82,14 +82,13 @@ html {
 .dark #root {
   background-color: #000;
 }
-.dark #root p {
-  color: whitesmoke;
-}
 
 .dark #root .full-name,
 .dark #root .contact-text,
 .dark #root .nav-bar-items,
-.dark #root .footer-text {
+.dark #root .footer-text,
+.dark #root p,
+.dark #root .hero-text {
   color: whitesmoke;
 }
 .nav-bar,
@@ -99,6 +98,10 @@ html {
 .dark #root .nav-bar-hire {
   color: #181818 !important;
   background-color: whitesmoke !important;
+}
+.dark #root .nav-bar-resume {
+  color: whitesmoke !important;
+  background-color: black !important;
 }
 .dark #root .resume-text {
   background: linear-gradient(45deg, #edff08, #a8fe39);
@@ -117,4 +120,19 @@ html {
 }
 .dark #root .footer-icons {
   color: #9aff18;
+}
+.dark #root .fswd-text {
+  background: linear-gradient(45deg, #edff08, #a8fe39);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dark #root .hero-bg {
+  background: linear-gradient(to left, #a8fe39, darkslategrey);
+}
+
+@media (max-width: 836px) {
+  .dark #root .hamburger-nav {
+    background-color: #181818 !important;
+  }
 }

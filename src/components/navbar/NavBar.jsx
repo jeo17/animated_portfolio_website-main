@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import ModeSwitcher from "../../chip/ModeSwitcher";
+import {useContext } from "react";
+import ThemeContext from "../../context/ThemeContext";
+
 const navItems = [
   {
     id: 0,
@@ -30,6 +33,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
 
+  const {myMode} = useContext(ThemeContext);
   // Toggle the navbar
   const toggleNav = (name) => {
     setIsOpen(!isOpen);
@@ -52,7 +56,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
   return (
     <div
       className={`w-full mx-auto  fixed top-0 py-5 sm:py-4 z-30 ${
-        document.documentElement.className === "dark"? scrollPosition > 0 ? `nav-bar shadow-md` : "bg-transparent" : scrollPosition > 0 ? `bg-white shadow-md` : "bg-transparent"
+        myMode === "dark"? scrollPosition > 0 ? `nav-bar shadow-md` : "bg-transparent" : scrollPosition > 0 ? `bg-white shadow-md` : "bg-transparent"
       } `}
     >
       <nav className=" container m-auto flex items-center justify-between">
@@ -80,12 +84,12 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
           <ul
             className={`flex items-center space-x-11 ${
               !isOpen ? "md:flex" : "md:right-[0%]"
-            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white `}
+            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white  hamburger-nav`}
           >
             {/* Use a button tag for better accessibility */}
             <button
               onClick={toggleNav}
-              className={`text-3xl hidden md:block relative right-0 top-4 container mx-auto`}
+              className={`text-3xl hidden md:block relative right-0 top-4 container mx-auto nav-bar-items`}
             >
               <RxCross2 size={25} />
             </button>
