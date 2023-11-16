@@ -33,7 +33,7 @@ const WorkCard = () => {
                   {data.desc}
                 </span>
                 <div className=" flex items-center justify-center gap-4">
-                  {data.id !== 1 && (
+                  {data.link !== "" && (
                     <Link
                       to={data.link}
                       target="_blank"
@@ -45,6 +45,7 @@ const WorkCard = () => {
                   )}
 
                   <br className="w-[2px] bg-white" />
+                  {data.git !== "" && (
                   <Link
                     to={data.git}
                     target="_blank"
@@ -53,6 +54,8 @@ const WorkCard = () => {
                     <AiOutlineGithub className="  text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
                     <span className=" text-black">Code</span>
                   </Link>
+
+)}
                 </div>
               </div>
             </POPUP>

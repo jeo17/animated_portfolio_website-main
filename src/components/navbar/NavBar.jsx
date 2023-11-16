@@ -78,7 +78,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
             onClick={toggleNav}
             className="cursor-pointer text-2xl hidden md:block"
           >
-            <HiMenu size={25} />
+            <HiMenu size={25} className="HiMenu"/>
           </button>
 
           <ul

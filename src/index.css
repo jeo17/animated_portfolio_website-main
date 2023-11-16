@@ -136,3 +136,7 @@ html {
     background-color: #181818 !important;
   }
 }
+ 
+.dark .HiMenu{
+  color:#f5f5f5;
+}
