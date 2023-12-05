@@ -8,6 +8,7 @@ import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
   SiExpress,
   SiFirebase,
   SiRedux,
+  SiTypescript,
 } from "react-icons/si";
 // import { GrCode } from "react-icons/gr";
 import { FaReact } from "react-icons/fa";
@@ -98,6 +99,11 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "Redux",
       fontAwesomeClassname: SiRedux ,
       className : "redux"
+    },
+    {
+      skillName: "TypeScript",
+      fontAwesomeClassname: SiTypescript ,
+      className : "typescript"
     },
 
   ],

@@ -54,6 +54,9 @@
 .software-skill-inline.mysql > i:hover, .software-skill-inline.mysql > i:hover ~ legend {
     color: #00758F;
 }
+.software-skill-inline.typescript > i:hover, .software-skill-inline.typescript > i:hover ~ legend {
+    color: #007acc;
+}
    /*  syle for the mui svg icon    */
 
 .custom-icon {
