@@ -47,9 +47,17 @@ export const data = [
     id: 4,
     img: 'https://res.cloudinary.com/dlszo5c4l/image/upload/v1700163647/Green_and_White_Photographic_Blogger_Bio-Link_Website_xhuk84.jpg',
     title: "DevFest Event 2023 Medea",
-    desc: "i will share the code after the event 24/10 ^_^",
+    desc: "",
     link: "https://devfest23medea.vercel.app/?fbclid=IwAR0b-c2RyVVTF_IqxmU0p4W_hOryqxEN5WJo1Mk5TL5ajMvO9kCKFI9xOs8",
-    git: "",
+    git: "https://github.com/saidseghirakram/finale_devfest_website",
+  },
+  {
+    id: 4,
+    img: 'https://res.cloudinary.com/dlszo5c4l/image/upload/v1704142283/Green_and_White_Photographic_Blogger_Bio-Link_Website_o17w8b.png',
+    title: "Modern Portfolio ",
+    desc: "didn't host it yet ^_^",
+    link: "",
+    git: "https://github.com/jeo17/Haithem-portfolio",
   }
 
 

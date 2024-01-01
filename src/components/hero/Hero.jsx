@@ -59,7 +59,7 @@ console.log(myMode)
               <span> Hire Me</span>
             </a>
             <a
-              href="https://res.cloudinary.com/dlszo5c4l/image/upload/v1693168564/My_Cv_Resume_whvtrc.pdf"
+              href="https://res.cloudinary.com/dlszo5c4l/image/upload/v1704143226/My_Resume_ub169m.pdf"
               target="_blank"
               className="nav-bar-resume flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-yellow-500"
               download
