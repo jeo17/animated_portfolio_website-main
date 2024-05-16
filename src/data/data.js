@@ -52,14 +52,22 @@ export const data = [
     git: "https://github.com/saidseghirakram/finale_devfest_website",
   },
   {
-    id: 4,
+    id: 5,
     img: 'https://res.cloudinary.com/dlszo5c4l/image/upload/v1704142283/Green_and_White_Photographic_Blogger_Bio-Link_Website_o17w8b.png',
     title: "Modern Portfolio ",
     desc: "didn't host it yet ^_^",
     link: "",
     git: "https://github.com/jeo17/Haithem-portfolio",
-  }
-
+  },
+    {
+    id: 6,
+    img: 'https://res.cloudinary.com/dlszo5c4l/image/upload/v1715876184/Pro_Peace_Anti_War_Peace_Youtube_Thumbnail_in_Light_Green_Blue_Purple_Gradient_Style_fge0wl.png',
+    title: "BOOTCAMP#101",
+    desc: "A registration website for a bootcamp we made.",
+    link: "https://bootcamp-101.vercel.app/",
+    git: "https://github.com/jeo17/bootcamp-101",
+    imgFit : "cover",
+  },
 
   
 ];

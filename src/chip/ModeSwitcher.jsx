@@ -2,11 +2,10 @@ import { React, useState } from "react";
 import "./ModeSwitcher.css";
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import Sun from "../assets/sun.png";
+import Moon from "../assets/moon.png"
 
-const sun =
-  "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
-const moon =
-  "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+
 
 function setLight() {
   const container = document.getElementsByClassName("theme-container")[0];
@@ -18,7 +17,7 @@ function setLight() {
     themeIcon.classList.remove("change");
   }, 300);
   themeIcon.classList.add("change");
-  themeIcon.src = sun;
+  themeIcon.src = Sun;
 }
 function setDark() {
   const container = document.getElementsByClassName("theme-container")[0];
@@ -30,7 +29,7 @@ function setDark() {
     themeIcon.classList.remove("change");
   }, 300);
   themeIcon.classList.add("change");
-  themeIcon.src = moon;
+  themeIcon.src = Moon;
 }
 
 // Change the icons inside the button based on previous settings
@@ -73,16 +72,16 @@ const ModeSwitcher = () => {
 
     let toggleIcon = localStorage.getItem("color-theme")
     ? localStorage.getItem("color-theme") === "light"
-      ? "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
-      : "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
-    : "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+      ? Sun
+      : Moon
+    : Moon;
 
 
   return (
     <div
       id="theme-toggle"
-      className={`theme-container ${toggletheme}`}
-      onClick={(eo) => {
+      className={`theme-container ${toggletheme} hover:scale-95 cursor-pointer`}
+      onClick={() => {
         changeMode(
           localStorage.getItem("color-theme") === null
             ? "dark"

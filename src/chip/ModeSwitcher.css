@@ -12,9 +12,6 @@
   opacity: 0.8;
 }
 
-.shadow-dark {
-  background: linear-gradient(145deg, #398bcd, #101c2d);
-}
 
 .shadow-light {
   box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,

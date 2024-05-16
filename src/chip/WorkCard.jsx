@@ -22,7 +22,7 @@ const WorkCard = () => {
                 <img
                   src={data.img}
                   alt={data.title}
-                  className=" object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
+                  className={`${data.imgFit? `object-${data.imgFit}` : `object-fit`} w-full h-full hover:scale-125 transition duration-500 cursor-pointer`}
                 />
               </div>
 
